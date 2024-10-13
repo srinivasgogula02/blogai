@@ -13,7 +13,7 @@ function App() {
           <div className="nav-content">
             <div className="nav-brand">
               <img src={logo} alt="Blog Logo" className="nav-logo" />
-              <span className="nav-title">TechInsights</span>
+              <span className="nav-title">blogAI</span>
             </div>
             <ul>
               <li><Link to="/">Home</Link></li>
@@ -32,7 +32,7 @@ function App() {
 
         <footer>
           <div className="footer-content">
-            <p>&copy; 2023 TechInsights. All rights reserved.</p>
+            <p>&copy; Built with love by Srinivas Gogula.</p>
           </div>
         </footer>
       </div>
