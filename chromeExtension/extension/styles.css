@@ -1,0 +1,129 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 500px; /* Adjusted width to match typical MetaMask size */
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.popup-container {
+    margin-top: 10px;
+    background-color: #282c34;
+    width: 100%;  /* Ensure the container takes the full width */
+    max-width: 350px;  /* MetaMask-like width */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.popup-container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.header {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Timer */
+#timer {
+    font-size: 2.5em;
+    color: #61dafb;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.start-button {
+    background-color: #28a745;
+}
+
+.start-button:hover:not(:disabled) {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+.stop-button {
+    background-color: #dc3545;
+}
+
+.stop-button:hover:not(:disabled) {
+    background-color: #c82333;
+    transform: translateY(-3px);
+}
+
+/* Notification */
+.notification {
+    font-size: 14px;
+    color: #4CAF50;
+    margin-top: 20px;
+    min-height: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    body {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .popup-container {
+        width: 100%;
+    }
+}
